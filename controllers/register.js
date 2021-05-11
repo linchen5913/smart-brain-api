@@ -29,7 +29,7 @@ const handleRegister = (req,res, db, bcrypt) => {
         .catch(trx.rollback)
     })
     .catch(err(e) => {
-        console.log(e);
+       
         res.status(400).json('unable to register, consult your administrator')
     })
 }
